@@ -17,12 +17,13 @@ export default function Footer() {
               />
             </a>
             <p className="text-muted-foreground text-sm max-w-md mb-6">
-              Using advanced optimization technology to reduce emergency response 
-              times and save lives. Operating in Chile and expanding globally.
+              Usando tecnología de optimización avanzada para reducir los tiempos de respuesta 
+              de emergencia y salvar vidas.
+              Operando en Chile.
             </p>
             <div className="flex items-center gap-4 flex-wrap">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/rapid-response-spa/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover-elevate active-elevate-2 p-2 rounded-md"
@@ -43,7 +44,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">Enlaces rápidos</h4>
             <ul className="space-y-3">
               <li>
                 <a 
@@ -51,7 +52,7 @@ export default function Footer() {
                   className="text-sm text-muted-foreground hover-elevate active-elevate-2 px-1 py-0.5 rounded-md -mx-1"
                   data-testid="link-footer-solution"
                 >
-                  Our Solution
+                  Nuestra Solución
                 </a>
               </li>
               <li>
@@ -60,7 +61,7 @@ export default function Footer() {
                   className="text-sm text-muted-foreground hover-elevate active-elevate-2 px-1 py-0.5 rounded-md -mx-1"
                   data-testid="link-footer-technology"
                 >
-                  Technology
+                  Tecnología
                 </a>
               </li>
               <li>
@@ -69,7 +70,7 @@ export default function Footer() {
                   className="text-sm text-muted-foreground hover-elevate active-elevate-2 px-1 py-0.5 rounded-md -mx-1"
                   data-testid="link-footer-impact"
                 >
-                  Impact
+                  Impacto
                 </a>
               </li>
               <li>
@@ -78,25 +79,25 @@ export default function Footer() {
                   className="text-sm text-muted-foreground hover-elevate active-elevate-2 px-1 py-0.5 rounded-md -mx-1"
                   data-testid="link-footer-contact"
                 >
-                  Contact
+                  Contacto
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">Contacto</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>contact@rapidresponse.cl</li>
-              <li>+56 2 1234 5678</li>
-              <li>Santiago, Chile</li>
+              <li>ceo@rapidresponse.cl</li>
+              <li>+56 94492 3478</li>
+              <li>Antofagasta, Chile</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p data-testid="text-copyright">
-            {currentYear} Rapid Response. All rights reserved.
+            {currentYear} Rapid Response. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6 flex-wrap">
             <a 
@@ -104,14 +105,14 @@ export default function Footer() {
               className="hover-elevate active-elevate-2 px-1 py-0.5 rounded-md -mx-1"
               data-testid="link-privacy"
             >
-              Privacy Policy
+              Política de Privacidad
             </a>
             <a 
               href="#" 
               className="hover-elevate active-elevate-2 px-1 py-0.5 rounded-md -mx-1"
               data-testid="link-terms"
             >
-              Terms of Service
+              Términos de Servicio
             </a>
           </div>
         </div>

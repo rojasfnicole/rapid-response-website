@@ -1,56 +1,105 @@
 import { Card } from "@/components/ui/card";
-import { Quote, MapPin, Clock, Users } from "lucide-react";
+import { SiLinkedin } from "react-icons/si";
+
+const teamMembers = [
+  // First row - 3 people
+  {
+    name: "Carlos Olivos Matus",
+    role: "Co-fundador & Director Científico",
+    image: "/carlos-olivos-foto.png",
+    linkedin: "https://cl.linkedin.com/in/carlos-olivos-b6a965144",
+  },
+  {
+    name: "Hernán Cáceres Venegas",
+    role: "Co-fundador",
+    image: "/hernan-caceres-foto.png",
+    linkedin: "https://cl.linkedin.com/in/hecaceres/en",
+  },
+  {
+    name: "Andrea Fernández Montero",
+    role: "CEO",
+    image: "/andrea-fernandez-foto.png",
+    linkedin: "https://cl.linkedin.com/in/andrea-fern%C3%A1ndez-montero-337676169",
+  },
+  // Second row - 4 people
+
+];
+
+const sponsors = [
+  {
+    name: "Financiado por",
+    description: "Agencia Nacional de Investigación y Desarollo del Ministerio de Ciencia, Tecnología, Conocimiento e Innovación",
+    logo: "/anid_rojo_azul.png",
+  },
+  {
+    name: "Apoyado por",
+    description: "Universidad Católica del Norte",
+    logo: "/copialogo.png",
+  },
+];
 
 export default function CaseStudySection() {
   return (
-    <section id="impact" className="py-16 lg:py-24 bg-primary/5" data-testid="section-case-study">
+    <section id="impact" className="py-16 lg:py-16 bg-primary/5" data-testid="section-case-study">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
+        <div className="text-center mb-8 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Proven Impact in Chile
+            Equipo de liderazgo
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our technology is actively deployed and making a measurable difference 
-            in emergency response outcomes.
+            
           </p>
         </div>
 
-        <Card className="max-w-4xl mx-auto p-8 lg:p-12">
-          <div className="flex items-start gap-4 mb-8">
-            <Quote className="h-10 w-10 text-primary flex-shrink-0" />
-            <blockquote className="text-lg lg:text-xl leading-relaxed italic text-muted-foreground">
-              "The implementation of Rapid Response's optimization system has 
-              transformed how we deploy our emergency resources. We're seeing 
-              consistent improvements in response times across all our coverage 
-              areas, and the data-driven approach has made resource planning 
-              significantly more effective."
-            </blockquote>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 pl-14 mb-10">
-            <span className="font-semibold">Regional Health Authority</span>
-            <span className="hidden sm:inline text-muted-foreground">•</span>
-            <span className="text-muted-foreground">Santiago Metropolitan Region</span>
-          </div>
+        {/* First row - 3 team members */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {teamMembers.slice(0, 3).map((member, index) => (
+            <Card key={index} className="p-6 text-center">
+              <div className="flex flex-col items-center">
+                <div className="w-24 h-24 rounded-full bg-muted mb-4 overflow-hidden flex items-center justify-center">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+                <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{member.role}</p>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <SiLinkedin className="h-5 w-5" />
+                </a>
+              </div>
+            </Card>
+          ))}
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-4 rounded-md bg-muted/50">
-              <Clock className="h-6 w-6 mx-auto mb-2 text-primary" />
-              <div className="text-3xl font-bold mb-1">3.5 min</div>
-              <div className="text-sm text-muted-foreground">Average time saved per call</div>
-            </div>
-            <div className="text-center p-4 rounded-md bg-muted/50">
-              <MapPin className="h-6 w-6 mx-auto mb-2 text-primary" />
-              <div className="text-3xl font-bold mb-1">15 zones</div>
-              <div className="text-sm text-muted-foreground">Active coverage areas</div>
-            </div>
-            <div className="text-center p-4 rounded-md bg-muted/50">
-              <Users className="h-6 w-6 mx-auto mb-2 text-primary" />
-              <div className="text-3xl font-bold mb-1">2.5M+</div>
-              <div className="text-sm text-muted-foreground">Population served</div>
-            </div>
+        </div>
+
+        {/* Sponsors section */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-8">Alianzas</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {sponsors.map((sponsor, index) => (
+              <Card key={index} className="p-6">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-32 h-32 mb-4 flex items-center justify-center bg-muted rounded-lg overflow-hidden mx-auto">
+                    <img 
+                      src={sponsor.logo} 
+                      alt={sponsor.name}
+                      className="max-w-full max-h-full object-contain mx-auto"
+                    />
+                  </div>
+                  <h4 className="font-semibold text-lg mb-2">{sponsor.name}</h4>
+                  <p className="text-sm text-muted-foreground">{sponsor.description}</p>
+                </div>
+              </Card>
+            ))}
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );

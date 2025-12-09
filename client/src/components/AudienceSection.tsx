@@ -4,72 +4,50 @@ import { Building2, Ambulance, Shield, Landmark, Hospital } from "lucide-react";
 const audiences = [
   {
     icon: Landmark,
-    title: "Government Agencies",
-    description: "Health ministries and emergency management authorities",
+    title: "Agencias Gubernamentales",
+    description: "Ministerios de salud y autoridades de gestión de emergencias",
     benefits: [
-      "Optimize public emergency fleet coverage",
-      "Data-driven resource allocation",
-      "Measurable outcome improvements",
-      "Transparent performance metrics",
+      "Optimizar la cobertura de la flota pública de emergencia",
+      "Asignación de recursos basada en datos",
+      "Mejoras medibles en resultados",
+      "Métricas de rendimiento transparentes",
     ],
   },
   {
     icon: Ambulance,
-    title: "Private Ambulance Services",
-    description: "Commercial EMS providers and transport companies",
+    title: "Servicios de Ambulancias Privadas",
+    description: "Proveedores comerciales de servicios médicos de emergencia y empresas de transporte",
     benefits: [
-      "Reduce operational costs",
-      "Improve service level compliance",
-      "Competitive advantage through faster response",
-      "Fleet utilization optimization",
+      "Reducir costos operativos",
+      "Mejorar el cumplimiento del nivel de servicio",
+      "Ventaja competitiva a través de respuesta más rápida",
+      "Optimización de utilización de flota",
     ],
   },
   {
     icon: Shield,
-    title: "Police & Emergency Services",
-    description: "Law enforcement and first responder organizations",
+    title: "Policía y Servicios de Emergencia",
+    description: "Organizaciones de aplicación de la ley y primeros respondedores",
     benefits: [
-      "Patrol route optimization",
-      "Incident response positioning",
-      "Cross-agency coordination",
-      "Coverage gap analysis",
-    ],
-  },
-  {
-    icon: Building2,
-    title: "City Councils",
-    description: "Municipal governments and urban planners",
-    benefits: [
-      "City-wide emergency coverage planning",
-      "Infrastructure investment decisions",
-      "Public safety improvements",
-      "Community health outcomes",
-    ],
-  },
-  {
-    icon: Hospital,
-    title: "Private Health Centers",
-    description: "Hospitals and healthcare networks",
-    benefits: [
-      "Patient transfer optimization",
-      "Ambulance fleet management",
-      "Emergency department coordination",
-      "Network-wide coverage",
+      "Optimización de rutas de patrullaje",
+      "Posicionamiento de respuesta a incidentes",
+      "Coordinación interagencial",
+      "Análisis de brechas de cobertura",
     ],
   },
 ];
 
 export default function AudienceSection() {
   return (
-    <section className="py-16 lg:py-24" data-testid="section-audience">
+    <section className="py-16 lg:py-16" data-testid="section-audience">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Who We Serve
+            A Quién Servimos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our optimization platform adapts to the unique needs of various 
-            organizations responsible for emergency response.
+            Nuestra plataforma de optimización se adapta a las necesidades únicas de diversas 
+            organizaciones responsables de la respuesta de emergencia.
           </p>
         </div>
 

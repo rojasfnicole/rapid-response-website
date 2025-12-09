@@ -11,10 +11,10 @@ export default function Navigation({ onRequestDemo }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Solution", href: "#solution" },
-    { label: "Technology", href: "#technology" },
-    { label: "Impact", href: "#impact" },
-    { label: "Contact", href: "#contact" },
+    { label: "Solución", href: "#solution" },
+    { label: "Tecnología", href: "#technology" },
+    { label: "Impacto", href: "#impact" },
+    { label: "Contacto", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -59,7 +59,7 @@ export default function Navigation({ onRequestDemo }: NavigationProps) {
 
           <div className="hidden md:block flex-shrink-0">
             <Button onClick={onRequestDemo} data-testid="button-request-demo-nav">
-              Request Demo
+              Solicitar prueba
             </Button>
           </div>
 
@@ -95,7 +95,7 @@ export default function Navigation({ onRequestDemo }: NavigationProps) {
                 className="mt-2"
                 data-testid="button-request-demo-mobile"
               >
-                Request Demo
+                Solicitar prueba
               </Button>
             </div>
           </div>

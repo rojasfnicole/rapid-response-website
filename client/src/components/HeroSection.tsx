@@ -20,13 +20,11 @@ export default function HeroSection({ onRequestDemo }: HeroSectionProps) {
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center py-20">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
-          Saving Lives with
-          <span className="block text-primary-foreground">Optimization</span>
+          Salvamos vidas con Inteligencia Artificial
         </h1>
         
-        <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Advanced algorithms that strategically reposition emergency vehicles, 
-          reducing response times when every second counts.
+        <p className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-10 leading-relaxed">
+          Tecnología predictiva que reposiciona estratégicamente vehículos de emergencia para reducir tiempos de respuesta
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
@@ -36,7 +34,7 @@ export default function HeroSection({ onRequestDemo }: HeroSectionProps) {
             className="bg-white text-black border-white/20 backdrop-blur-md"
             data-testid="button-request-demo-hero"
           >
-            Request a Demo
+            Solicitar prueba
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <Button 
@@ -50,7 +48,7 @@ export default function HeroSection({ onRequestDemo }: HeroSectionProps) {
             data-testid="button-learn-more"
           >
             <Play className="mr-2 h-4 w-4" />
-            See How It Works
+            Ver cómo funciona
           </Button>
         </div>
       </div>

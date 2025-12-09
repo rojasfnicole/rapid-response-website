@@ -32,8 +32,8 @@ export default function ContactSection() {
     
     if (!formData.organizationType || !formData.name || !formData.email) {
       toast({
-        title: "Missing Required Fields",
-        description: "Please fill in organization type, name, and email.",
+        title: "Campos requeridos faltantes",
+        description: "Por favor complete el tipo de organización, nombre y correo electrónico.",
         variant: "destructive",
       });
       return;
@@ -46,13 +46,13 @@ export default function ContactSection() {
       
       setIsSubmitted(true);
       toast({
-        title: "Demo Request Sent",
-        description: "We'll be in touch within 24 hours.",
+        title: "Solicitud de prueba enviada",
+        description: "Nos pondremos en contacto dentro de 24 horas.",
       });
     } catch (error) {
       toast({
-        title: "Submission Failed",
-        description: "Something went wrong. Please try again or contact us directly.",
+        title: "Envío fallido",
+        description: "Algo salió mal. Por favor intente nuevamente o contáctenos directamente.",
         variant: "destructive",
       });
     } finally {
@@ -70,17 +70,17 @@ export default function ContactSection() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <Card className="p-12">
             <CheckCircle className="h-16 w-16 text-primary mx-auto mb-6" />
-            <h2 className="text-2xl lg:text-3xl font-bold mb-4">Thank You!</h2>
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4">¡Gracias!</h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Your demo request has been received. Our team will contact you within 24 hours 
-              to schedule a personalized demonstration.
+              Su solicitud de prueba ha sido recibida. Nuestro equipo se pondrá en contacto con usted dentro de 24 horas 
+              para programar una demostración personalizada.
             </p>
             <Button 
               variant="outline" 
               onClick={() => setIsSubmitted(false)}
               data-testid="button-submit-another"
             >
-              Submit Another Request
+              Enviar otra solicitud
             </Button>
           </Card>
         </div>
@@ -93,11 +93,10 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            Request a Demo
+            Solicitar una prueba
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            See how Rapid Response can transform emergency services in your region. 
-            Our team will walk you through a personalized demonstration.
+            Vea cómo Rapid Response puede transformar los servicios de emergencia en su región
           </p>
         </div>
 
@@ -105,7 +104,7 @@ export default function ContactSection() {
           <Card className="lg:col-span-3 p-6 lg:p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <Label htmlFor="organizationType">Organization Type</Label>
+                <Label htmlFor="organizationType">Tipo de Organización</Label>
                 <Select
                   value={formData.organizationType}
                   onValueChange={(value) => handleChange("organizationType", value)}
@@ -115,25 +114,25 @@ export default function ContactSection() {
                     className="mt-2"
                     data-testid="select-organization-type"
                   >
-                    <SelectValue placeholder="Select your organization type" />
+                    <SelectValue placeholder="Seleccione el tipo de organización" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="government">Government Agency</SelectItem>
-                    <SelectItem value="private-ambulance">Private Ambulance Service</SelectItem>
-                    <SelectItem value="police">Police / Emergency Services</SelectItem>
-                    <SelectItem value="city-council">City Council / Municipality</SelectItem>
-                    <SelectItem value="health-center">Private Health Center</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    <SelectItem value="government">Agencia Gubernamental</SelectItem>
+                    <SelectItem value="private-ambulance">Servicio Privado</SelectItem>
+                    <SelectItem value="police">Policía / Servicio de Emergencia</SelectItem>
+                    <SelectItem value="city-council">Consejo Municipal / Municipalidad</SelectItem>
+                    <SelectItem value="health-center">Centro de Salud</SelectItem>
+                    <SelectItem value="other">Otro</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="name">Full Name</Label>
+                  <Label htmlFor="name">Nombre completo</Label>
                   <Input
                     id="name"
-                    placeholder="Your name"
+                    placeholder="Tu nombre"
                     className="mt-2"
                     value={formData.name}
                     onChange={(e) => handleChange("name", e.target.value)}
@@ -142,11 +141,11 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label htmlFor="email">Correo electrónico</Label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="you@organization.com"
+                    placeholder="tu@organizacion.com"
                     className="mt-2"
                     value={formData.email}
                     onChange={(e) => handleChange("email", e.target.value)}
@@ -157,11 +156,11 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <Label htmlFor="phone">Phone Number (Optional)</Label>
+                <Label htmlFor="phone">Número de teléfono (Opcional)</Label>
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="+56 9 1234 5678"
+                  placeholder="+56 94492 3478"
                   className="mt-2"
                   value={formData.phone}
                   onChange={(e) => handleChange("phone", e.target.value)}
@@ -170,10 +169,10 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message">Mensaje</Label>
                 <Textarea
                   id="message"
-                  placeholder="Tell us about your organization and what you're hoping to achieve..."
+                  placeholder="Cuéntenos qué te gustaría explorar..."
                   className="mt-2 min-h-[120px]"
                   value={formData.message}
                   onChange={(e) => handleChange("message", e.target.value)}
@@ -189,11 +188,11 @@ export default function ContactSection() {
                 data-testid="button-submit-demo"
               >
                 {isSubmitting ? (
-                  "Sending..."
+                  "Enviando..."
                 ) : (
                   <>
                     <Send className="mr-2 h-4 w-4" />
-                    Request Demo
+                    Solicitar prueba
                   </>
                 )}
               </Button>
@@ -202,55 +201,55 @@ export default function ContactSection() {
 
           <div className="lg:col-span-2 space-y-6">
             <Card className="p-6">
-              <h3 className="font-semibold mb-4">What to Expect</h3>
+              <h3 className="font-semibold mb-4">Qué esperar</h3>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>30-minute personalized demo tailored to your organization</span>
+                  <span>Demostración personalizada de 30 minutos adaptada a su organización</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Discussion of your specific coverage challenges</span>
+                  <span>Discusión de sus desafíos específicos de cobertura</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Review of implementation process and timeline</span>
+                  <span>Revisión del proceso de implementación y cronograma</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>No commitment required</span>
+                  <span>Sin compromiso requerido</span>
                 </li>
               </ul>
             </Card>
 
             <Card className="p-6">
-              <h3 className="font-semibold mb-4">Get in Touch</h3>
+              <h3 className="font-semibold mb-4">Póngase en contacto</h3>
               <div className="space-y-4">
                 <a 
-                  href="mailto:contact@rapidresponse.cl" 
+                  href="mailto:ceo@rapidresponse.cl" 
                   className="flex items-center gap-3 text-sm text-muted-foreground hover-elevate active-elevate-2 p-2 rounded-md -mx-2"
                   data-testid="link-email"
                 >
                   <Mail className="h-5 w-5 text-primary" />
-                  <span>contact@rapidresponse.cl</span>
+                  <span>ceo@rapidresponse.cl</span>
                 </a>
                 <a 
-                  href="tel:+56212345678" 
+                  href="tel:+56944923478" 
                   className="flex items-center gap-3 text-sm text-muted-foreground hover-elevate active-elevate-2 p-2 rounded-md -mx-2"
                   data-testid="link-phone"
                 >
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>+56 2 1234 5678</span>
+                  <span>+56 94492 3478</span>
                 </a>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground p-2 -mx-2">
                   <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>Santiago, Chile</span>
+                  <span>Antofagasta, Chile</span>
                 </div>
               </div>
             </Card>
 
             <p className="text-xs text-muted-foreground text-center">
-              Response within 24 business hours
+              Respuesta dentro de 48 horas hábiles
             </p>
           </div>
         </div>
